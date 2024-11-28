@@ -41,7 +41,7 @@ const teamMembers = [
 function creazioneCarta(member){
   const {name , role , email ,img} = member;
   const carta = `
-  <div class="col-4 mt-5 d-flex border border-success-subtle">
+  <div class="col-4 mt-5 d-flex bg-black text-light">
       <div id="image-box">
           <img class="" src="${img}" alt="{${name}}">
       </div>
@@ -66,3 +66,14 @@ function myTeam(array) {
 }
 
 myTeam(teamMembers);
+
+// const form = document.querySelector('form')
+
+// form.addEventListener('submit',(e)=>{
+//   e.defaultPrevented()
+//   const name = document.getElementById('name').value; 
+//   const role = document.getElementById('role').value; 
+//   const email = document.getElementById('email').value; 
+//   const img = document.getElementById('img').value;
+  
+// })
