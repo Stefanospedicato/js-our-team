@@ -67,13 +67,20 @@ function myTeam(array) {
 
 myTeam(teamMembers);
 
-// const form = document.querySelector('form')
+const form = document.querySelector('form')
 
-// form.addEventListener('submit',(e)=>{
-//   e.defaultPrevented()
-//   const name = document.getElementById('name').value; 
-//   const role = document.getElementById('role').value; 
-//   const email = document.getElementById('email').value; 
-//   const img = document.getElementById('img').value;
+form.addEventListener('submit',(e)=>{
+    e.defaultPrevented()
+    const name = document.getElementById('name').value; 
+    const role = document.getElementById('role').value; 
+    const email = document.getElementById('email').value; 
+    const img = document.getElementById('img').value;
+  const newMember = {
+    name,
+    role,
+    email,
+    img
+  }
+  teamMembers.push(newMember);
   
-// })
+})
