@@ -36,3 +36,20 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+function crezioneCarta (member){
+  const {name , role , email ,img} = member
+  const carta = `
+  <div class="col-3 d-flex bg-black text-light m-3">
+          <div id="image-box">
+            <img class="" src="img/female1.png" alt="">
+          </div>
+          <div id="description">
+            <h3 class="mt-5 m-3">Paola Caruso</h3>
+            <h6 class="m-3">Deisgner</h6>
+            <a class="m-3" href="#">prova@prova.it</a>
+          </div>
+        </div>
+  `
+  return carta;
+}
