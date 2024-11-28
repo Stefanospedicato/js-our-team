@@ -41,7 +41,7 @@ const teamMembers = [
 function creazioneCarta(member){
   const {name , role , email ,img} = member;
   const carta = `
-  <div class="col-3 mt-5 offset-1 d-flex">
+  <div class="col-4 mt-5 d-flex border border-success-subtle">
       <div id="image-box">
           <img class="" src="${img}" alt="{${name}}">
       </div>
