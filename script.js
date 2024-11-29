@@ -37,13 +37,14 @@ const teamMembers = [
   }
 ];
 
+const row = document.querySelector('.row');
 
 function creazioneCarta(member){
   const {name , role , email ,img} = member;
   const carta = `
   <div class="col-4 mt-5 d-flex bg-black text-light">
       <div id="image-box">
-          <img class="" src="${img}" alt="{${name}}">
+          <img class="img-fluid" src="${img}" alt="{${name}}">
       </div>
       <div class="flex-grow" id="description">
           <h3 class="mt-5 m-3">${name}</h3>
@@ -54,8 +55,6 @@ function creazioneCarta(member){
   `
   return carta;
 }
-
-const row = document.querySelector('.row');
 
 function myTeam(array) {
   let carte = '';
@@ -70,7 +69,7 @@ myTeam(teamMembers);
 const form = document.querySelector('form')
 
 form.addEventListener('submit',(e)=>{
-    e.defaultPrevented()
+    e.preventDefault()
     const name = document.getElementById('name').value; 
     const role = document.getElementById('role').value; 
     const email = document.getElementById('email').value; 
@@ -82,5 +81,5 @@ form.addEventListener('submit',(e)=>{
     img
   }
   teamMembers.push(newMember);
-  
+  myTeam(teamMembers)
 })
