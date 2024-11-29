@@ -70,10 +70,10 @@ const form = document.querySelector('form')
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
-    const name = document.getElementById('name').value; 
-    const role = document.getElementById('role').value; 
-    const email = document.getElementById('email').value; 
-    const img = document.getElementById('img').value;
+    const name = document.getElementById('name-input').value; 
+    const role = document.getElementById('role-input').value; 
+    const email = document.getElementById('email-input').value; 
+    const img = document.getElementById('img-input').value;
   const newMember = {
     name,
     role,
